@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="login">
+    <img src="../../assets/images/logo.png" alt="kernotek logo">
+    <div class="login-box">
+      <form [formGroup]="loginForm" (submit)="submit()" >
+        <span>
+          Ingresa tus credenciales
+        </span>
+        <input class="form-field" type="text" placeholder="Usuario" formControlName="user">
+        <input class="form-field" type="password" placeholder="Contraseña" formControlName="password">
+        <div class="actions">
+          <div class="checkbox">
+            <input type="checkbox" name="remember" id="">
+            <label for="remember">
+              Recuerdame
+            </label>
+          </div>
+          <button class="kerno-button" type="submit" [disabled]="loginForm.invalid || uploading">
+            Aceptar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
